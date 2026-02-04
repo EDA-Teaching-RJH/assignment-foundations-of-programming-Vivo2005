@@ -6,15 +6,15 @@ id=["H1","V1","H2","H3","H4"]
 
 def init_database():
     for i in range(len(names)):
-        print( names[i]+"-"+roles[i]+"-"+divs[i]+"-"+races[i],"\n")
+        print( names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i],"\n")
 
 def display_menu():
     user=input("User?:")
     print("--- WELCOME",user.upper(),"---")
     print("1. Add Crew To Roster")
     print("2. Remove crew from roster")
-    print("3. Update role")
-    print("4.")
+    print("3. Update rank")
+    print("4. ")
     print("5.")
     print("6.")
     print("7.")
