@@ -6,12 +6,12 @@ races=["Human","Vulcan","Human","Human","Human"]
 
 def init_database():
     for i in range(len(names)):
-        print(names[i]+"-"+[roles])
+        print("\n", names[i]+"-"+roles[i]+"-"+divs[i]+"-"+races[i])
 
 
 
 def main():
-    
+    init_database()
 
 
 
