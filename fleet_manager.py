@@ -9,8 +9,9 @@ def init_database():
         print( names[i]+"-"+roles[i]+"-"+divs[i]+"-"+races[i],"\n")
 
 def display_menu():
-    user=input("User?:").upper
-    print("\n","WELCOME", user )
+    user=input("User?:")
+    print("WELCOME",user.upper())
+    
 
 def add_member():
     print("hey")
