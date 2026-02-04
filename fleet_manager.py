@@ -6,11 +6,11 @@ races=["Human","Vulcan","Human","Human","Human"]
 
 def init_database():
     for i in range(len(names)):
-        print("\n", names[i]+"-"+roles[i]+"-"+divs[i]+"-"+races[i])
+        print( names[i]+"-"+roles[i]+"-"+divs[i]+"-"+races[i],"\n")
 
 def display_menu():
     user=input("User?:").upper
-    print("\n","WELCOME"+ user )
+    print("\n","WELCOME", user )
 
 def add_member():
     print("hey")
