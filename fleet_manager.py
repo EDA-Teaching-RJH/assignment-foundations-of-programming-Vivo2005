@@ -1,8 +1,8 @@
 
 names=["Kirk","Spock","Scotty","Mccoy","Sulu"]
-roles=["Officer","Officer","Engineer","Medical Officer","Helmsman"]
+rank=["Officer","Officer","Engineer","Medical Officer","Helmsman"]
 divs=["Command","Command","Engine","Medical","Operations"]
-races=["Human","Vulcan","Human","Human","Human"]
+id=["H1","V1","H2","H3","H4"]
 
 def init_database():
     for i in range(len(names)):
@@ -10,8 +10,16 @@ def init_database():
 
 def display_menu():
     user=input("User?:")
-    print("WELCOME",user.upper())
-    
+    print("--- WELCOME",user.upper(),"---")
+    print("1. Add Crew To Roster")
+    print("2. Remove crew from roster")
+    print("3. Update role")
+    print("4.")
+    print("5.")
+    print("6.")
+    print("7.")
+    print("8.")
+
 
 def add_member():
     print("hey")
