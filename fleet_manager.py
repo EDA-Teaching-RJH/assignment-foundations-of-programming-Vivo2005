@@ -1,6 +1,6 @@
 
 names=["Kirk","Spock","Scotty","Mccoy","Sulu"]
-rank=["Officer","Officer","Engineer","Medical Officer","Helmsman"]
+rank=["First Officer","Officer","Engineer","Medical Officer","Helmsman"]
 divs=["Command","Command","Engine","Medical","Operations"]
 id=["H1","V1","H2","H3","H4"]
 
@@ -65,6 +65,29 @@ def update_rank():
         n_rank= input ( "what is " + names[I] + "'s new rank :").strip().lower().title()
         rank [I] = n_rank
         print ("Rank updated ...")
+
+def display_roster():
+    print("m")
+
+def search_crew():
+    t= input ("Search for ...:").strip().lower().title()
+    if t in names:
+        n= names.index(t)
+        print (names[n]+"-"+rank[n]+"-"+divs[n]+"-"+id[n])
+    elif t in rank:
+        r = rank.index(t)
+        print (names[r]+"-"+rank[r]+"-"+divs[r]+"-"+id[r])
+    elif t in divs :
+        d= divs.index(t)
+        print (names[d]+"-"+rank[d]+"-"+divs[d]+"-"+id[d])
+    elif t in id:
+        i= id.index(t)
+        print (names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i])
+    else:
+        print ("No crew found , try again")
+        search_crew()
+    
+    
        
 
 
@@ -83,6 +106,12 @@ def main():
 
     elif opt == "3":
         update_rank()
+
+    elif opt == "4":
+        display_roster()
+
+    elif opt == "5":
+        search_crew()
 
  
 
