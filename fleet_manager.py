@@ -10,19 +10,21 @@ def init_database():
 
 def display_menu():
     user=input("User?:")
-    print("--- WELCOME",user.upper(),"---")
+    print("\n--- WELCOME",user.upper(),"---")
     print("1. Add Crew To Roster")
     print("2. Remove crew from roster")
     print("3. Update rank")
-    print("4. ")
-    print("5.")
-    print("6.")
-    print("7.")
-    print("8.")
-
+    print("4. display roster")
+    print("5. search crew")
+    print("6. search division")
+    print("7. calculate pay role")
+    print("8. count officers")
+    print("9. exit")
+    
+  
 
 def add_member():
-    print("hey")
+    print("hey"*3)
 
 
 def remove_member():
@@ -35,6 +37,16 @@ def remove_member():
 def main():
     init_database()
     display_menu()
+    opt= input("select function:")
+    if opt == 1:
+        add_member()
+    
+    elif opt == 2:
+        remove_member()
+
+ 
+
+
 
 
 
