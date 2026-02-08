@@ -6,7 +6,7 @@ id=["H1","V1","H2","H3","H4"]
 
 def init_database():
     for i in range(len(names)):
-        print( names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i],"\n")
+        print( names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i],)
 
 def display_menu():
     user=input("User?:")
@@ -43,15 +43,17 @@ def add_member():
         print("Crew member added...")
     
 
-
-
-
-
 def remove_member():
-    print("hello")
-
-
-
+    rem_id = input("Input crew member ID:").upper()
+    if rem_id not in id :
+        print ("ID not recognised, try again...")
+        remove_member()
+    else:
+        I= id.index(rem_id)
+        names.pop(I)
+        rank.pop(I)
+        id.pop(I)
+        divs.pop(I)
 
 
 def main():
