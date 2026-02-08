@@ -24,7 +24,27 @@ def display_menu():
   
 
 def add_member():
-    print("hey"*3)
+    new_name = input ("crew name:").lower().title()
+    new_rank = input ("crew rank:").lower().title()
+    new_div = input ("crew division:").lower().title()
+    new_id = input ("crew id:").upper()
+    if new_rank not in rank :
+        print("Rank not recognised, try again...")
+        add_member()
+    elif new_id in id :
+        print ("ID already in use, try again...") 
+        add_member()
+    else:
+        names.append(new_name)
+        rank.append(new_rank)
+        divs.append(new_div)
+        id.append(new_id)
+
+        print("Crew member added...")
+    
+
+
+
 
 
 def remove_member():
@@ -37,11 +57,13 @@ def remove_member():
 def main():
     init_database()
     display_menu()
+
     opt= input("select function:")
-    if opt == 1:
+
+    if opt == "1":
         add_member()
     
-    elif opt == 2:
+    elif opt == "2":
         remove_member()
 
  
