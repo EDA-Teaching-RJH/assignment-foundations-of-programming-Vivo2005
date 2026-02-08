@@ -55,6 +55,19 @@ def remove_member():
         id.pop(I)
         divs.pop(I)
 
+def update_rank():
+    rank_id = input ("Input crew member ID:").upper()
+    if rank_id not in id:
+        print ("ID not recognised, try again...")
+        update_rank()
+    else:
+        I= id.index(rank_id)
+        n_rank= input ( "what is " + names[I] + "'s new rank :").strip().lower().title()
+        rank [I] = n_rank
+        print ("Rank updated ...")
+       
+
+
 
 def main():
     init_database()
@@ -67,6 +80,9 @@ def main():
     
     elif opt == "2":
         remove_member()
+
+    elif opt == "3":
+        update_rank()
 
  
 
