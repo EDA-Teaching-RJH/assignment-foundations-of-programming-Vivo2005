@@ -1,15 +1,16 @@
 
 names=["Kirk","Spock","Scotty","Mccoy","Sulu"]
 rank=["First Officer","Officer","Engineer","Medical Officer","Helmsman"]
-divs=["Command","Command","Engine","Medical","Operations"]
+divs=["Command","Command","Operations","Operations","Operations"]
 id=["H1","V1","H2","H3","H4"]
+user = input (" User name :").lower().title()
 
 def init_database():
     for i in range(len(names)):
         print( names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i],)
 
 def display_menu():
-    user=input("User?:")
+    
     print("\n--- WELCOME",user.upper(),"---")
     print("1. Add Crew To Roster")
     print("2. Remove crew from roster")
@@ -86,6 +87,14 @@ def search_crew():
     else:
         print ("No crew found , try again")
         search_crew()
+
+def filter_by_division():
+    d = input (" scie")
+
+def calculate_payroll():
+
+def count_officers():
+
     
     
        
@@ -112,6 +121,20 @@ def main():
 
     elif opt == "5":
         search_crew()
+
+    elif opt =="6":
+        filter_by_division
+        
+     elif opt == "7":
+
+
+    elif opt == "8":
+
+
+    elif opt =="9":
+        print ("Shutting down...")
+        print ("Goodbye", user)
+        break
 
  
 
