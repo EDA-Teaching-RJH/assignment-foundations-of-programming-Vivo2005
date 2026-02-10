@@ -31,10 +31,10 @@ def add_member():
     new_id = input ("crew id:").upper()
     if new_rank not in rank :
         print("Rank not recognised, try again...")
-        add_member()
+        display_menu()
     elif new_id in id :
         print ("ID already in use, try again...") 
-        add_member()
+        display_menu()
     else:
         names.append(new_name)
         rank.append(new_rank)
@@ -48,7 +48,7 @@ def remove_member():
     rem_id = input("Input crew member ID:").upper()
     if rem_id not in id :
         print ("ID not recognised, try again...")
-        remove_member()
+        display_menu()
     else:
         I= id.index(rem_id)
         names.pop(I)
@@ -60,7 +60,7 @@ def update_rank():
     rank_id = input ("Input crew member ID:").upper()
     if rank_id not in id:
         print ("ID not recognised, try again...")
-        update_rank()
+        display_menu()
     else:
         I= id.index(rank_id)
         n_rank= input ( "what is " + names[I] + "'s new rank :").strip().lower().title()
@@ -86,14 +86,32 @@ def search_crew():
         print (names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i])
     else:
         print ("No crew found , try again")
-        search_crew()
+        display_menu()
 
 def filter_by_division():
-    d = input (" scie")
+    d = input ("Science , Operations or Command :").strip().lower().title()
+    if d == "Science" :
+        print ("No crew on-board ...")
+
+    elif d == "Operations":
+        print ("Scotty , Mccoy and Sulu")
+
+    elif d == "Command":
+        print ("Kirk and Spock")
+
+    else:
+        print ("Division not recognised")
+        display_menu()
 
 def calculate_payroll():
+    count=0
+    i = range(len(rank))
+    if rank(i) == "First Officer":
+        count= count+ 1000
+        print (count)
 
 def count_officers():
+    print ("hello")
 
     
     
@@ -125,16 +143,21 @@ def main():
     elif opt =="6":
         filter_by_division
         
-     elif opt == "7":
-
+    elif opt == "7":
+        calculate_payroll()
 
     elif opt == "8":
-
+        count_officers()
 
     elif opt =="9":
         print ("Shutting down...")
         print ("Goodbye", user)
-        break
+        
+
+    else :
+        print ("Input not recognised ...")
+        display_menu ()
+
 
  
 
