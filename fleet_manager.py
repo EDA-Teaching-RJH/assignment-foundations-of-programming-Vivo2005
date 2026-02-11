@@ -147,7 +147,7 @@ def count_officers():
     
 
 def main():
-    init_database()
+    
     display_menu()
 
     opt= input("select function:")
@@ -190,6 +190,6 @@ def main():
 
 
 
-
+init_database()
 while True:
-    main()
+   main()
