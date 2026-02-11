@@ -1,14 +1,14 @@
 
 names=["Kirk","Spock","Scotty","Mccoy","Sulu"]
-rank=["First Officer","Officer","Engineer","Medical Officer","Helmsman"]
+rank=["Captain","First Officer","Engineer","Medical Officer","Helmsman"]
 divs=["Command","Command","Operations","Operations","Operations"]
 id=["H1","V1","H2","H3","H4"]
 user = input (" User name :").lower().title()
-
+#done
 def init_database():
     for i in range(len(names)):
         print( names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i],)
-
+#done
 def display_menu():
     
     print("\n--- WELCOME",user.upper(),"---")
@@ -23,7 +23,7 @@ def display_menu():
     print("9. exit")
     
   
-
+#done
 def add_member():
     new_name = input ("crew name:").lower().title()
     new_rank = input ("crew rank:").lower().title()
@@ -43,7 +43,7 @@ def add_member():
 
         print("Crew member added...")
     
-
+#done
 def remove_member():
     rem_id = input("Input crew member ID:").upper()
     if rem_id not in id :
@@ -55,7 +55,8 @@ def remove_member():
         rank.pop(I)
         id.pop(I)
         divs.pop(I)
-
+        
+#done
 def update_rank():
     rank_id = input ("Input crew member ID:").upper()
     if rank_id not in id:
@@ -67,9 +68,13 @@ def update_rank():
         rank [I] = n_rank
         print ("Rank updated ...")
 
+
+# look at how to use a dictionary to create table
 def display_roster():
     print("m")
 
+
+#done
 def search_crew():
     t= input ("Search for ...:").strip().lower().title()
     if t in names:
@@ -88,6 +93,7 @@ def search_crew():
         print ("No crew found , try again")
         display_menu()
 
+# done but fails when a new crew member is added
 def filter_by_division():
     d = input ("Science , Operations or Command :").strip().lower().title()
     if d == "Science" :
@@ -103,21 +109,34 @@ def filter_by_division():
         print ("Division not recognised")
         display_menu()
 
+#done with dictionary
 def calculate_payroll():
-    count=0
-    i = range(len(rank))
-    if rank(i) == "First Officer":
-        count= count+ 1000
-        print (count)
+    pay = {
+        "Captain": 100000,
+        "First Officer": 75000,
+        "Engineer": 50000,
+        "Medical Officer": 50000,
+        "Helmsman": 40000
+    }
+    p=0
+    for r in rank:
+        if r in pay:
+            p=p+pay[r]
 
+    print("Total payroll: $",p)
+
+#done
 def count_officers():
-    print ("hello")
+      
+    count = 0
+    for r in rank:
+         if r== "Captain" or r == "First Officer": 
+            count = count + 1
+    print("High ranking officers: ", count)
 
     
     
-       
-
-
+    
 
 def main():
     init_database()
