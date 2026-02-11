@@ -3,6 +3,7 @@ names=["Kirk","Spock","Scotty","Mccoy","Sulu"]
 rank=["Captain","First Officer","Engineer","Medical Officer","Helmsman"]
 divs=["Command","Command","Operations","Operations","Operations"]
 id=["H1","V1","H2","H3","H4"]
+Recognised_Ranks = ["Captain","First Officer","Engineer","Medical Officer","Helmsman","Officer","Ensign","Lieutenant","Lt. Commander","Commander"]
 
 user = input (" User name :").lower().title()
 
@@ -33,12 +34,12 @@ def add_member():
     new_rank = input ("crew rank:").lower().title()
     new_div = input ("crew division:").lower().title()
     new_id = input ("crew id:").upper()
-    if new_rank not in rank :
+    if new_rank not in Recognised_Ranks:
         print("Rank not recognised, try again...")
-        display_menu()
+        
     elif new_id in id :
         print ("ID already in use, try again...") 
-        display_menu()
+    
     else:
         names.append(new_name)
         rank.append(new_rank)
@@ -52,7 +53,7 @@ def remove_member():
     rem_id = input("Input crew member ID:").upper()
     if rem_id not in id :
         print ("ID not recognised, try again...")
-        display_menu()
+        
     else:
         I= id.index(rem_id)
         names.pop(I)
@@ -65,7 +66,7 @@ def update_rank():
     rank_id = input ("Input crew member ID:").upper()
     if rank_id not in id:
         print ("ID not recognised, try again...")
-        display_menu()
+        
     else:
         I= id.index(rank_id)
         n_rank= input ( "what is " + names[I] + "'s new rank :").strip().lower().title()
@@ -98,7 +99,7 @@ def search_crew():
         print (names[i]+"-"+rank[i]+"-"+divs[i]+"-"+id[i])
     else:
         print ("No crew found , try again")
-        display_menu()
+        
 
 # done but fails when a new crew member is added
 def filter_by_division():
@@ -114,7 +115,7 @@ def filter_by_division():
 
     else:
         print ("Division not recognised")
-        display_menu()
+        
 
 #done with dictionary
 def calculate_payroll():
@@ -182,7 +183,7 @@ def main():
 
     else :
         print ("Input not recognised ...")
-        display_menu ()
+        
 
 
  
