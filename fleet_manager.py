@@ -168,7 +168,7 @@ def main():
         search_crew()
 
     elif opt =="6":
-        filter_by_division
+        filter_by_division()
         
     elif opt == "7":
         calculate_payroll()
@@ -179,7 +179,8 @@ def main():
     elif opt =="9":
         print ("Shutting down...")
         print ("Goodbye", user)
-        
+        exit()
+    
 
     else :
         print ("Input not recognised ...")
@@ -193,3 +194,4 @@ def main():
 init_database()
 while True:
    main()
+ 
