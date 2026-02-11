@@ -3,7 +3,11 @@ names=["Kirk","Spock","Scotty","Mccoy","Sulu"]
 rank=["Captain","First Officer","Engineer","Medical Officer","Helmsman"]
 divs=["Command","Command","Operations","Operations","Operations"]
 id=["H1","V1","H2","H3","H4"]
+
 user = input (" User name :").lower().title()
+
+active = True
+
 #done
 def init_database():
     for i in range(len(names)):
