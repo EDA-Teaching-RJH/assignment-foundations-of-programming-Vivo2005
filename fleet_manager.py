@@ -55,7 +55,7 @@ def remove_member():
         rank.pop(I)
         id.pop(I)
         divs.pop(I)
-        
+
 #done
 def update_rank():
     rank_id = input ("Input crew member ID:").upper()
@@ -71,7 +71,10 @@ def update_rank():
 
 # look at how to use a dictionary to create table
 def display_roster():
-    print("m")
+    print ("---Current crew roster:---")
+    print ("Names  -  Rank  -  Division  -  ID")
+    for i in range(len(names)):
+        print (names[i]+" - "+rank[i]+" - "+divs[i]+" - "+id[i])
 
 
 #done

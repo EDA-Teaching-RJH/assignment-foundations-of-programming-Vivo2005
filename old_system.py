@@ -47,7 +47,7 @@ def run_system_monolith():
         elif opt == "3":
             rem = input("Name to remove: ").lower().title()
             if rem not in n:
-                print("Crew member not found.")
+                print("Crew member not found...")
             else:
                 idx = n.index(rem)
                 n.pop(idx)
